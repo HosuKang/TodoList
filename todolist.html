@@ -1,14 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TodoList</title>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./todolist.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TodoList</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./todolist.js" defer></script>
 </head>
+
 <body>
-    
+
+  <div class="todo-container">
+    <div class="todo-box">
+      <div class="todo-box-top">
+        <h1>Todo-List</h1>
+        <button type="button" id="todoAdd" class="todo-add-btn">추가</button>
+      </div>
+      <div class="todo-box-category">
+        <button type="button" class="todo-box-category-item active">전체</button>
+        <button type="button" class="todo-box-category-item">완료</button>
+        <button type="button" class="todo-box-category-item">미완료</button>
+      </div>
+      <ul class="todo-list-wr">
+        <li class="todo-list">
+          <div class="todo-list-title-wr">
+            <div class="check-wr">
+              <input type="checkbox" name="list-check" id="list-check">
+              <label for="list-check"><span class="todo-list-title">얄코 자바스크립트 인강 듣기 얄코 자바스크립트 인강 듣기 얄코 자바스크립트 인강 듣기 얄코 자바스크립트 인강 듣기<span class="todo-list-hurry"></span></span></label>
+            </div>
+          </div>
+          <div class="btn-wr todo-list-btn-wr">
+            <button type="button" class="todo-list-btn todo-list-btn--edit">수정</button>
+            <button type="button" class="todo-list-btn todo-list-btn--del">삭제</button>
+          </div>
+        </li>
+      </ul>
+      <div class="btn-wr todo-box-btn-wr">
+        <button type="button" class="todo-box-btn todo-box-btn--alldel">전체삭제</button>
+        <button type="button" class="todo-box-btn todo-box-btn--comdel">완료삭제</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="todo-add-pop-wr">
+    <div class="pop-bg"></div>
+    <div class="todo-add-pop">
+      <div class="check-wr">
+        <input type="checkbox" name="hurryChk" id="hurryChk">
+        <label for="hurryChk">급함</label>
+      </div>
+      <div class="input-wr">
+        <input type="text" class="todo-add-input">
+      </div>
+      <div class="btn-wr todo-add-btn-wr">
+        <button type="button" class="todo-box-btn todo-box-btn--cancel">취소</button>
+        <button type="button" class="todo-box-btn todo-box-btn--submit">등록</button>
+      </div>
+    </div>
+  </div>
+
 </body>
+
 </html>

@@ -1,0 +1,27 @@
+html, body {margin: 0; padding: 0;}
+h1, h2, h3 {margin: 0;}
+ul, li {margin: 0; padding: 0; list-style: none;}
+button {border: 0; cursor: pointer;}
+
+.todo-container {display: flex; align-items: center; justify-content: center; width: 100%; height: 100vh; background-color: #333;}
+.todo-box {display: flex; flex-direction: column; gap: 20px; padding: clamp(10px, 5vw, 40px); width: min(85vw, 700px); height: auto; max-height: 90vh; border-radius: 1vw; background-color: #eee;}
+.todo-box-top {display: flex; align-items: center; justify-content: space-between;}
+.todo-box-category {}
+.todo-box-category-item.active {background-color: pink;}
+.todo-list-wr {padding-bottom: clamp(20px, 3vw, 30px);}
+.todo-list {display: flex; align-items: center; justify-content: space-between;}
+.todo-list-title-wr {display: flex; align-items: center; padding-right: 2vw;}
+.btn-wr {display: flex; align-items: center; gap: 10px;}
+.todo-box-btn-wr {justify-content: flex-end;}
+.check-wr {display: flex; align-items: center;}
+.check-wr input[type="checkbox"] {position: absolute; width: 0; height: 0; opacity: 0;}
+.check-wr input[type="checkbox"] ~ label {display: flex; align-items: center; position: relative; padding-left: 35px; cursor: pointer;}
+.check-wr input[type="checkbox"]:checked ~ label .todo-list-title {display: inline-block; text-decoration: line-through;}
+.check-wr input[type="checkbox"] ~ label::before {content: ''; position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 25px; height: 25px; vertical-align: middle; border: 1px solid #bbb; background-color: #fff;}
+.check-wr input[type="checkbox"]:checked ~ label::before { background: #fff url('./img/check.svg') no-repeat center / 80%;}
+.todo-list-hurry {display: inline-block; margin-left: 2px; width: 25px; height: 25px; min-width: 25px; vertical-align: middle; background: url('./img/hurry_color.svg') no-repeat center / contain;}
+.check-wr input[type="checkbox"]:checked ~ label .todo-list-hurry {background: url('./img/hurry_gray.svg') no-repeat center / contain;}
+
+.todo-add-pop-wr {display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;}
+.todo-add-pop {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #ddd;}
+.pop-bg {position: absolute; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8);}
